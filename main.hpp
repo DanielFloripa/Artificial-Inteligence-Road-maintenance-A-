@@ -15,6 +15,7 @@
 #include "graphicInterface.hpp"
 #include "searchs.hpp"
 #include "items.hpp"
+#include "factories.hpp"
 using namespace std;
 
 #endif /* SRC_MAIN_HPP_ */

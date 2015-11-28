@@ -65,6 +65,18 @@ void showLand(vector<vector<int> > matriz) {
 			case 15:
 				cout << "\033[1;45m" << matriz.at(i).at(j) << "\033[0m";
 				break;
+			case 16:
+				cout << "\033[1;46m" << matriz.at(i).at(j) << "\033[0m";
+				break;
+			case 17:
+				cout << "\033[1;47m" << matriz.at(i).at(j) << "\033[0m";
+				break;
+			case 18:
+				cout << "\033[1;48m" << matriz.at(i).at(j) << "\033[0m";
+				break;
+			case 19:
+				cout << "\033[1;49m" << matriz.at(i).at(j) << "\033[0m";
+				break;
 			default:
 				cout << " ";
 				break;

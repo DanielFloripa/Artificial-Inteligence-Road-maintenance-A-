@@ -19,27 +19,56 @@ void createLand(vector<vector<int> > *matriz) {
 void showLand(vector<vector<int> > matriz) {
 	for (int i = 0; i < 42; ++i) {
 		for (int j = 0; j < 42; ++j) {
-			if (matriz.at(i).at(j) == 1) {
+			switch (matriz.at(i).at(j)) {
+			case 1:
 				cout << "\033[1;34m" << matriz.at(i).at(j) << "\033[0m";
-			} else if (matriz.at(i).at(j) == 2) {
+				break;
+			case 2:
 				cout << "\033[1;35m" << matriz.at(i).at(j) << "\033[0m";
-			} else if (matriz.at(i).at(j) == 3) {
+				break;
+			case 3:
 				cout << "\033[1;32m" << matriz.at(i).at(j) << "\033[0m";
-			} else if (matriz.at(i).at(j) == 4) {
+				break;
+			case 4:
 				cout << "\033[1;33m" << matriz.at(i).at(j) << "\033[0m";
-			} else if (matriz.at(i).at(j) == 5) {
+				break;
+			case 5:
 				cout << "\033[1;35m" << matriz.at(i).at(j) << "\033[0m";
-			} else if (matriz.at(i).at(j) == 6) {
+				break;
+			case 6:
 				cout << "\033[1;31m" << matriz.at(i).at(j) << "\033[0m";
-			} else if (matriz.at(i).at(j) == 7) {
+				break;
+			case 7:
 				cout << "\033[1;37m" << matriz.at(i).at(j) << "\033[0m";
-			} else if (matriz.at(i).at(j) == 8) {
+				break;
+			case 8:
 				cout << "\033[1;38m" << matriz.at(i).at(j) << "\033[0m";
-			} else if (matriz.at(i).at(j) == 9) {
+				break;
+			case 9:
 				cout << "\033[1;39m" << matriz.at(i).at(j) << "\033[0m";
-			} else {
-				//cout << matriz->at(i).at(j) ;
+				break;
+			case 10:
+				cout << "\033[1;40m" << matriz.at(i).at(j) << "\033[0m";
+				break;
+			case 11:
+				cout << "\033[1;41m" << matriz.at(i).at(j) << "\033[0m";
+				break;
+			case 12:
+				cout << "\033[1;42m" << matriz.at(i).at(j) << "\033[0m";
+				break;
+			case 13:
+				cout << "\033[1;43m" << matriz.at(i).at(j) << "\033[0m";
+				break;
+			case 14:
+				cout << "\033[1;44m" << matriz.at(i).at(j) << "\033[0m";
+				break;
+			case 15:
+				cout << "\033[1;45m" << matriz.at(i).at(j) << "\033[0m";
+				break;
+			default:
 				cout << " ";
+				break;
+
 			}
 		}
 		cout << endl;

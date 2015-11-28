@@ -14,6 +14,7 @@
 #include "grid.hpp"
 #include "graphicInterface.hpp"
 #include "searchs.hpp"
+#include "items.hpp"
 using namespace std;
 
 #endif /* SRC_MAIN_HPP_ */

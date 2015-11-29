@@ -5,8 +5,8 @@ CPP11=-std=c++11
 
 all: robo
 
-robo: main.o grid.o graphicInterface.o ParserCSV.o searchs.o node.o items.o factories.o
-	g++ main.o graphicInterface.o grid.o ParserCSV.o searchs.o node.o items.o factories.o -o robo -pthread $(SFML_LIB) $(SFML_INCLUDE)
+robo: main.o grid.o graphicInterface.o ParserCSV.o searchs.o node.o items.o factories.o robot.o
+	g++ main.o graphicInterface.o grid.o ParserCSV.o searchs.o node.o items.o factories.o robot.o -o robo -pthread $(SFML_LIB) $(SFML_INCLUDE)
 
 main.o: main.cpp
 	g++ $(CPP11) $(DEBUG) -c -Wall main.cpp $(SFML_INCLUDE)
@@ -22,6 +22,9 @@ factories.o: factories.cpp
 
 items.o: items.cpp
 	g++ $(CPP11) $(DEBUG) -c items.cpp
+	
+robot.o: robot.cpp
+	g++ $(CPP11) $(DEBUG) -c robot.cpp
 
 grid.o: grid.cpp
 	g++ $(CPP11) $(DEBUG) -c grid.cpp

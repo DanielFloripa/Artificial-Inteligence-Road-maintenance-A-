@@ -16,6 +16,7 @@
 #include "searchs.hpp"
 #include "items.hpp"
 #include "factories.hpp"
+#include "robot.hpp"
 using namespace std;
 
 #endif /* SRC_MAIN_HPP_ */

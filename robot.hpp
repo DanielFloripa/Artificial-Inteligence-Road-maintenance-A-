@@ -7,7 +7,7 @@
 #include "searchs.hpp"
 using namespace std;
 
-int robot(vector<vector<int> > *);
-int moveRobot(vector<vector<int> > *,vector<vector<int> > *);
+int robot(vector<vector<int> > *,int *, int *);
+int moveRobot(vector<vector<int> > *,vector<vector<int> > *,int,int);
 
 #endif

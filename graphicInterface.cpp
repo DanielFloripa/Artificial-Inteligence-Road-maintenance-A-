@@ -9,13 +9,13 @@
 void interfaceGrafica(vector<vector<int> > matriz) {
 	bool flag;
 	sf::RenderWindow *window;
-	std::vector<std::vector<sf::RectangleShape> > grid;
+	std::vector < std::vector<sf::RectangleShape> > grid;
 	window = new sf::RenderWindow(sf::VideoMode(resolucao, resolucao),
 			"Blind Pursuit!");
 	window->setPosition(sf::Vector2i(700 / 2, 50));
 
 	for (int i = 0; i < 42; ++i) {
-		vector<sf::RectangleShape> row;
+		vector < sf::RectangleShape > row;
 		for (int j = 0; j < 42; ++j) {
 			row.push_back(
 					sf::RectangleShape(
@@ -38,18 +38,16 @@ void interfaceGrafica(vector<vector<int> > matriz) {
 		}
 		grid.push_back(row);
 	}
-	update(matriz, window, grid);
-	getchar();
-}
 
-void update(vector<vector<int> > matriz, sf::RenderWindow *window,
-		std::vector<std::vector<sf::RectangleShape> > grid) {
-	//buscaProfundidade(&matriz,10,10);
-	updateColor(matriz, &grid);
-	for (int i = 0; i < 42; i++)
-		for (int j = 0; j < 42; j++)
-			window->draw(grid.at(i).at(j));
-	window->display();
+	while (window->isOpen()) {
+		updateColor(matriz, &grid);
+		for (int i = 0; i < 42; i++)
+			for (int j = 0; j < 42; j++)
+				window->draw(grid.at(i).at(j));
+
+		window->display();
+	}
+	getchar();
 }
 
 void updateColor(vector<vector<int> > matriz,
@@ -78,7 +76,8 @@ void updateColor(vector<vector<int> > matriz,
 			} else if (matriz.at(i).at(j) == 7) {
 				grid->at(i).at(j).setFillColor(sf::Color(sf::Color(0, 100, 0)));
 			} else if (matriz.at(i).at(j) == 8) {
-				grid->at(i).at(j).setFillColor(sf::Color(sf::Color(255, 146, 0)));
+				grid->at(i).at(j).setFillColor(
+						sf::Color(sf::Color(255, 146, 0)));
 			} else if (matriz.at(i).at(j) == -1) {
 				grid->at(i).at(j).setFillColor(sf::Color(sf::Color::Black));
 			} else if (matriz.at(i).at(j) == -2) {

@@ -9,6 +9,7 @@
 int main(int argc, char **argv) {
 	//int tipoBusca = atoi(argv[1]);
 	vector<vector<int> > matriz, matrizMovimentos;
+	int positionRobotX = 0,positionRobotY = 0;
 	createLand(&matriz);
 	createLand(&matrizMovimentos);
 	populateItems(&matriz, 20, 1); //20 baterias de carga elétrica
@@ -21,11 +22,17 @@ int main(int argc, char **argv) {
 	populateFactories(&matriz, 3); //Indústria petrolífera com dutos entupidos
 	populateFactories(&matriz, 4); //Fábrica de fundição com superaquecimento nas caldeiras
 	populateFactories(&matriz, 5); //Indústria de vigas de aço com falta de braços mecânicos para moldagem
-	robot(&matriz); //20 é o robo
-	moveRobot(&matriz,&matrizMovimentos);
+	robot(&matriz,&positionRobotX,&positionRobotY); //20 é o robo
+	for (int var = 0; var < 10; ++var) {
+		moveRobot(&matriz,&matrizMovimentos,positionRobotX,positionRobotY);
+		showLand(matriz);
+		interfaceGrafica(matriz);
+		getchar();
+	}
+
 	//buscaA(&matriz,10,10,20,20);
-	showLand(matrizMovimentos);
-	interfaceGrafica(matrizMovimentos);
+	showLand(matriz);
+	interfaceGrafica(matriz);
 	return 0;
 }
 

@@ -14,7 +14,6 @@
 using namespace std;
 
 void interfaceGrafica(vector<vector<int> >);
-void update(vector<vector<int> >, sf::RenderWindow *, std::vector<std::vector<sf::RectangleShape> > );
 void updateColor(vector<vector<int> >, std::vector<std::vector<sf::RectangleShape> > *);
 
 
